@@ -4,6 +4,7 @@ description: ${project.description}
 version: ${project.version}
 author: Rayzr522
 website: https://github.com/Rayzr522/EssentialsWarpSelector
+depend: [Essentials, ScoreboardMenu]
 commands:
   ezwarp:
     description: "Opens the EZWarp menu"
