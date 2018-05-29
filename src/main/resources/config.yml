@@ -9,6 +9,7 @@ messages:
       no-warps: "&cNo warps available."
       opening: "Opening warp selector..."
       warping: "Warping to &c{0}&6..."
+      cancelled: "Warp cancelled."
     essentialswarpselector:
       usage: |
         &8&m----------&6 EssentialsWarpSelector &8&m----------
@@ -17,7 +18,8 @@ messages:
       version: "You are running &cEssentialsWarpSelector&6 v&c{0}"
       reloaded: "The config has been &creloaded"
   menu:
-    title: "&6Choose Warp"
+    title: "&8&m--&6 Choose Warp &8&m--"
+    cancel: "&4\u2716 &7Cancel"
     prefix:
-      selected: "&e"
-      other: "&c"
+      selected: "&e| &6"
+      other: "&7| &c"

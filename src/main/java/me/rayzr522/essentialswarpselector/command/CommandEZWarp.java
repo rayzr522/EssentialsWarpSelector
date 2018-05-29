@@ -37,14 +37,19 @@ public class CommandEZWarp implements CommandExecutor {
         }
 
         new ScoreboardMenu<Warp>()
+                .addOption(null)
                 .addAll(warps.toArray(new Warp[0]))
-                .setRenderTransformer(Warp::getName)
+                .setRenderTransformer(warp -> warp != null ? warp.getName() : plugin.tr(false, "menu.cancel"))
                 .setTitle(plugin.tr(false, "menu.title"))
                 .setSelectedPrefix(plugin.tr(false, "menu.prefix.selected"))
                 .setOtherPrefix(plugin.tr(false, "menu.prefix.other"))
                 .setCallback(warp -> {
-                    player.teleport(warp.getLocation());
-                    player.sendMessage(plugin.tr("command.ezwarp.warping", warp.getName()));
+                    if (warp == null) {
+                        player.sendMessage(plugin.tr("command.ezwarp.cancelled"));
+                    } else {
+                        player.teleport(warp.getLocation());
+                        player.sendMessage(plugin.tr("command.ezwarp.warping", warp.getName()));
+                    }
                 })
                 .openFor(player);
 
