@@ -4,6 +4,7 @@ import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.Warps;
 import com.earth2me.essentials.commands.WarpNotFoundException;
 import me.rayzr522.essentialswarpselector.command.CommandEZWarp;
+import me.rayzr522.essentialswarpselector.command.CommandEssentialsWarpSelector;
 import me.rayzr522.essentialswarpselector.config.Localization;
 import me.rayzr522.essentialswarpselector.struct.Warp;
 import net.ess3.api.InvalidWorldException;
@@ -30,7 +31,7 @@ public class EssentialsWarpSelector extends JavaPlugin {
         }
 
         getCommand("ezwarp").setExecutor(new CommandEZWarp(this));
-
+        getCommand("essentialswarpselector").setExecutor(new CommandEssentialsWarpSelector(this));
         reload();
     }
 

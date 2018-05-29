@@ -1,5 +1,5 @@
 messages:
-  prefix: "&6EZWarp &8\u00bb "
+  prefix: "&6EZ&eWarp &8\u00bb &6"
   command:
     fail:
       prefix-addon: "&c"
@@ -8,8 +8,12 @@ messages:
     ezwarp:
       no-warps: "&cNo warps available."
       opening: "Opening warp selector..."
-      warping: "Warping to &c{0}&6"
+      warping: "Warping to &c{0}&6..."
     essentialswarpselector:
+      usage: |
+        &8&m----------&6 EssentialsWarpSelector &8&m----------
+        &7/ews version &8- &eShows the current version
+        &7/ews reload &8- &eReloads EssentialsWarpSelector
       version: "You are running &cEssentialsWarpSelector&6 v&c{0}"
       reloaded: "The config has been &creloaded"
   menu:
