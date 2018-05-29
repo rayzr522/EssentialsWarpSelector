@@ -1,0 +1,11 @@
+main: me.rayzr522.essentialswarpselector.EssentialsWarpSelector
+name: ${project.name}
+description: ${project.description}
+version: ${project.version}
+author: Rayzr522
+website: https://github.com/Rayzr522/EssentialsWarpSelector
+commands:
+  ezwarp:
+    description: "Opens the EZWarp menu"
+    aliases: [ezw]
+    usage: "Rayzr borked things :^)"
