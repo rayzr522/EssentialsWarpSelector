@@ -8,5 +8,9 @@ depend: [Essentials, ScoreboardMenu]
 commands:
   ezwarp:
     description: "Opens the EZWarp menu"
-    aliases: [ezw]
+    aliases: [ezw, wm]
     usage: "Rayzr borked things :^)"
+  essentialswarpselector:
+    description: "EssentialsWarpSelector admin command"
+    aliases: [ews]
+    usage: "Rayzr borked more things lul"

@@ -1,0 +1,19 @@
+messages:
+  prefix: "&6EZWarp &8\u00bb "
+  command:
+    fail:
+      prefix-addon: "&c"
+      no-permission: "You need the permission '{0}' to do that!"
+      only-players: "Only players can use this!"
+    ezwarp:
+      no-warps: "&cNo warps available."
+      opening: "Opening warp selector..."
+      warping: "Warping to &c{0}&6"
+    essentialswarpselector:
+      version: "You are running &cEssentialsWarpSelector&6 v&c{0}"
+      reloaded: "The config has been &creloaded"
+  menu:
+    title: "&6Choose Warp"
+    prefix:
+      selected: "&e"
+      other: "&c"

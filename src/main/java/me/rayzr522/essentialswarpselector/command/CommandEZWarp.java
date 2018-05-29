@@ -3,7 +3,6 @@ package me.rayzr522.essentialswarpselector.command;
 import me.rayzr522.essentialswarpselector.EssentialsWarpSelector;
 import me.rayzr522.essentialswarpselector.struct.Warp;
 import me.rayzr522.scoreboardmenu.ScoreboardMenu;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,8 +19,12 @@ public class CommandEZWarp implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (!plugin.checkPermission(sender, "use", true)) {
+            return true;
+        }
+
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "Only players can use this!");
+            sender.sendMessage(plugin.tr("command.fail-only-players"));
             return true;
         }
 
@@ -29,20 +32,23 @@ public class CommandEZWarp implements CommandExecutor {
         List<Warp> warps = plugin.getWarps(player);
 
         if (warps.size() < 1) {
-            player.sendMessage(ChatColor.RED + "No warps available.");
+            player.sendMessage(plugin.tr("command.ezwarp.no-warps"));
             return true;
         }
 
         new ScoreboardMenu<Warp>()
                 .addAll(warps.toArray(new Warp[0]))
                 .setRenderTransformer(Warp::getName)
-                .setTitle(ChatColor.GOLD + "Choose Warp")
-                .setSelectedPrefix(ChatColor.YELLOW.toString())
-                .setOtherPrefix(ChatColor.RED.toString())
-                .setCallback(warp -> player.teleport(warp.getLocation()))
+                .setTitle(plugin.tr(false, "menu.title"))
+                .setSelectedPrefix(plugin.tr(false, "menu.prefix.selected"))
+                .setOtherPrefix(plugin.tr(false, "menu.prefix.other"))
+                .setCallback(warp -> {
+                    player.teleport(warp.getLocation());
+                    player.sendMessage(plugin.tr("command.ezwarp.warping", warp.getName()));
+                })
                 .openFor(player);
 
-        player.sendMessage(ChatColor.GOLD + "EZWarp " + ChatColor.DARK_GRAY + "\u00bb" + ChatColor.YELLOW + " Opened warp selector.");
+        player.sendMessage(plugin.tr("command.ezwarp.opening"));
 
         return true;
     }
