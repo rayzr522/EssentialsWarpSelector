@@ -6,7 +6,7 @@
 
     <groupId>me.rayzr522</groupId>
     <artifactId>essentialswarpselector</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>EssentialsWarpSelector</name>
     <description>A bridge between Essentials and ScoreboardMenu to allow easy warping</description>
 
