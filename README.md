@@ -23,7 +23,3 @@ Aliases: `/ews`
 ## Installation
 
 Install the latest version of [ScoreboardMenu](https://github.com/Rayzr522/ScoreboardMenu) and then grab the latest EssentialsWarpSelector JAR file from [the releases page](https://github.com/Rayzr522/EssentialsWarpSelector/releases).
-
-## Join Me
-
-[![Discord Badge](https://github.com/Rayzr522/ProjectResources/raw/master/RayzrDev/badge-small.png)](https://discord.io/rayzrdevofficial)
